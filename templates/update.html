@@ -1,0 +1,13 @@
+<form method="post" action="{{ url_for('update_page', student_id=student._id) }}">
+    <!-- Your form fields for update -->
+    <label for="update_name">New Name:</label>
+    <input type="text" name="update_name" id="update_name" value="{{ student.name }}" required>
+
+    <label for="update_grade">New Grade:</label>
+    <input type="text" name="update_grade" id="update_grade" value="{{ student.grade }}" required>
+
+    <label for="update_marks">New Marks:</label>
+    <input type="number" name="update_marks" id="update_marks" value="{{ student.marks }}" required>
+
+    <button type="submit">Update</button>
+</form>
